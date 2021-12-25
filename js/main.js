@@ -17,7 +17,7 @@ var options = {
     appSecret: 'AohyBFEEO4Jlq2CCAqjZYtUX9YjpyXBYEgjp4KXr0RP6l4Kk4ETLaSfLj0C/6+UJsA==',
     trackingInterval: 60,
     sensorPollingFrequency: 10,
-    packageId: "internship.zighra.web.com",
+    packageId: "sshmhr.github.io/zigharia-internship-demo/internship.zighra.web.com",
 }
 
 $(document).ready(function () {
