@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <title>SensifyID Javascript SDK - Sample App v2</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/kinetic-sdk-1.0.1.min.js"></script>
+</head>
+
+<body id="body">
+    <span style="display:none;" id="pointer"></span>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">SensifyID Javascript SDK - Sample App v2</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <ul class="nav nav-pills">
+                                <li>
+                                    <input type="button" id="startTracking" class="btn btn-success" value="Start Tracking" onclick="startTracking();">
+                                </li>
+                                <li>
+                                    <input style="display:none;" type="button" id="stopTracking" class="btn btn-danger" value="Stop Tracking" onclick="stopTracking();">
+                                </li>
+                                <li class="pull-right">
+                                    <input type="button" class="btn btn-default" value="How to use ?" data-toggle="modal" data-target="#instructions">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body" style="min-height:500px!important;">
+
+                            <div class="tab-content">
+                                <div id="trackareaContent" class="tab-pane fade in active">
+                                    <h2></h2>
+                                    <div id="trackarea">
+                                        <div class="">
+                                            <div class="col-md-12">
+                                                <h2>Test Form</h2>
+                                                <p>You can interact with the below form and the SDK will record your behaviour.</p>
+                                                <form class="form-horizontal" id="demoForm" method="post">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <input autocomplete="off" type="text" name="name" class="form-control" id="txtUsername" placeholder="Enter name" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-12">
+                                                            <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+                                                            <button type="button" id="cancel-button" class="btn btn-default">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                    <div id="successMessage" style="display:none;" class="alert alert-success">
+                                                        <p>
+                                                            <strong>Success!</strong> Now you can click the Stop Tracking button
+                                                            to stop the tracking.</p>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="instructions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="demo-instructions" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="demo-instructions">Instructions</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <strong>Below are the steps to run the demo of SensifyID Javascript SDK demo application.</strong>
+                        </p>
+                        <ol>
+                            <li>Click
+                                <span class="label label-success">Start Tracking</span> button.</li>
+                            <li>Go to the blue bordered area and interact with the form. (It is a sample form for demo and it
+                                will not save/post any content that you type.)</li>
+                            <li>Once done, click the
+                                <span class="label label-danger">Stop Tracking</span> button in the top.</li>
+                            <li>Now your tracking session is completed.</li>
+                            <li>Click on the
+                                <span class="label label-primary">View Results</span> button to view the data which is collected using the SDK.</li>
+                            </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Yep, I got it!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>SensifyID JS SDK v1.0.1   </span>
+            <span class="pull-right">&copy; Zighra, Inc.</span>
+        </footer>
+    </div>
+    <script src="js/main.js">
+    </script>
+    <script src="js/helper.js">
+    </script>
+</body>
+
+</html>
